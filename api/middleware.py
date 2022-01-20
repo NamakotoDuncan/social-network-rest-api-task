@@ -1,7 +1,7 @@
 from django.contrib.auth.middleware import get_user
 from django.utils.functional import SimpleLazyObject
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.exceptions import AuthenticationFailed
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 
 class JWTAuthenticationInMiddleware(object):
@@ -9,7 +9,7 @@ class JWTAuthenticationInMiddleware(object):
         self.get_response = get_response
 
     def __call__(self, request):
-        request.user = SimpleLazyObject(lambda:self.__class__.get_jwt_user(request))
+        request.user = SimpleLazyObject(lambda: self.__class__.get_jwt_user(request))
         return self.get_response(request)
 
     @staticmethod

@@ -1,14 +1,15 @@
+import logging
 import os
+from datetime import datetime
 from pathlib import Path
 
-from celery import shared_task
-from .models import CustomUser
-import requests
 import environ
-import logging
-from datetime import datetime
+import requests
+from celery import shared_task
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+
+from .models import CustomUser
 
 env = environ.Env(
     # set casting, default value

@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from network.models import Post, CustomUser, PostLikes
+
+from network.models import Post, CustomUser
 
 
 class PostSerializer(serializers.ModelSerializer):

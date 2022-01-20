@@ -38,7 +38,7 @@ Users’ posts.
 - [POST] /api/post-create/ (POST) - create new post
 - [GET]  /api/post - List all Posts
 - [GET]  /api/post/<post-id> - get Post by id
-- [GET]  /api/post/<POST-ID> like or unlike a Post
+- [POST]  /api/post/<POST-ID> like or unlike a Post
 - [PUT]  /api/post/<POST-ID> - Update post with Id
 - [DELETE]  /api/post/<POST-ID> - delete post with Id
 

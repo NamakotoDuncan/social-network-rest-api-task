@@ -9,8 +9,7 @@ services:
     volumes:
       - .:/tradecore_social
     command: >
-      sh -c "python3 manage.py migrate &&
-             python3 manage.py runserver 0.0.0.0:8000"
+      sh -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
     env_file:
       - ./.env
   redis:
@@ -22,7 +21,6 @@ services:
     command: celery -A social worker -l INFO --uid=nobody --gid=nogroup
     volumes:
       - .:/tradecore_social
-#    environment:
     env_file:
       - ./.env
     depends_on:

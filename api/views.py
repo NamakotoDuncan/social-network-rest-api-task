@@ -1,22 +1,19 @@
+import logging
+
 import jwt
-import datetime
 from django.contrib.auth import user_logged_in
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
-
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_jwt.serializers import jwt_payload_handler
 
-from network.tasks import prepare_and_submit_data
-from . import serializers
 from network.models import Post, CustomUser, PostLikes
+from network.tasks import prepare_and_submit_data
 from social import settings
-
-import logging
-
+from . import serializers
 from .serializers import PostUpdateSerializer
 
 logger = logging.getLogger(__name__)

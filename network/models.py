@@ -1,5 +1,5 @@
-from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 from django.utils import timezone
 
 
@@ -7,11 +7,7 @@ class CustomUser(AbstractUser):
     last_request = models.DateTimeField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     country = models.CharField(max_length=50, null=True, blank=True)
-    # country_code = models.CharField(max_length=5, null=True, blank=True)
-    # country_geoname_id = models.IntegerField(null=True, blank=True)
     ip_address = models.GenericIPAddressField(null=True, blank=True)
-    # longitude = models.FloatField(null=True, blank=True)
-    # latitude = models.FloatField(null=True, blank=True)
     joined_on_holiday = models.BooleanField(default=False)
     email_valid = models.BooleanField(default=False)
 
