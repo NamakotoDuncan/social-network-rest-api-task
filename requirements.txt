@@ -1,0 +1,14 @@
+pip~=20.2.3
+setuptools~=49.2.1
+Django~=3.2.8
+djangorestframework~=3.12.4
+PyJWT~=1.7.1
+djangorestframework-jwt~=1.11.0
+celery~=5.1.2
+requests~=2.27.1
+urllib3~=1.26.8
+django-environ~=0.8.1
+beautifulsoup4~=4.10.0
+django-bootstrap5~=21.3
+soupsieve~=2.3.1
+redis
