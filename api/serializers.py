@@ -43,7 +43,6 @@ class UserSerializer(serializers.ModelSerializer):
 
         def create(self, validated_data):
             pass
-            # prepare_and_submit_data.delay(request.data['email'])
 
 
 class UserInfoSerializer(serializers.ModelSerializer):

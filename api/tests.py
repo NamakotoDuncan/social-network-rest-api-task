@@ -4,7 +4,6 @@ from django.test import TestCase
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from api.views import PostLike
 from network.models import Post, CustomUser
 
 
