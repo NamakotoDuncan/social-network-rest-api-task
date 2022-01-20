@@ -43,8 +43,6 @@ Users’ posts.
 - [DELETE]  /api/post/<POST-ID> - delete post with Id
 
 
-puostman link here
-
 ## Setup
 ### Environment variables
 #### check .env.example file
@@ -75,7 +73,7 @@ python manage.py runserver
 curl -X POST -H 'Content-Type: application/json' -i http://localhost:8000/api/login --data '{
     "email": "newuser@test2.com",
     "password": "1234563"
-}7
+}
 
 
 
